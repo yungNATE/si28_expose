@@ -10,7 +10,7 @@ body{
         de 8% de la largeur de la fenêtre (8vw).
         Cette valeur ne pourra pas excéder ni 10px, ni 150px 
     */
-    padding : 90px clamp(10px, 8vw, 150px);
+    padding : 10px clamp(10px, 8vw, 150px);
 }
 
 h1{
@@ -45,6 +45,7 @@ h1 > span{
     font-weight: bold;
     filter: drop-shadow(0px 10px 25px rgba(0, 0, 0, 0.25));
 }
+
 .btn::after {
     /*  Permet d'éviter que le bouton change de taille au survol */
 
@@ -69,7 +70,7 @@ h1 > span{
 /* ACCUEIL */
 
 #page_accueil h1{
-    margin-bottom: 180px;
+    margin-bottom: 100px;
 }
 
 #page_accueil .content {
