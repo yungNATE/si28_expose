@@ -1,0 +1,88 @@
+/* GENERAL */
+html, body{
+    min-height: 100%;
+}
+
+body{
+    /*  clamp() permet de définir une taille variable
+        ainsi qu'une borne min et max.
+        Ici on aura donc un padding horizontal
+        de 8% de la largeur de la fenêtre (8vw).
+        Cette valeur ne pourra pas excéder ni 10px, ni 150px 
+    */
+    padding : 90px clamp(10px, 8vw, 150px);
+}
+
+h1{
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+h1 > span{
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.btn{
+    font-size: 24px;
+    font-size: clamp(16px, 2vw, 24px);
+    line-height: 29px;
+    white-space: nowrap;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    padding: clamp(25px, 10%, 50px) clamp(25px, 10%, 85px);
+    /*  border-radius: 999px permet d'avoir cet effet "pilule" 
+        999px est une valeur arbitraire énorme pour maximiser l'effet
+        info : ne pas utiliser 100% ! Ca ne rend pas pareil */
+    border-radius: 999px;
+
+    background: linear-gradient(360deg, #B0B0B0 0%, rgba(226, 226, 226, 0) 100%);
+    transition: 0.3s;
+}
+.btn:hover{
+    font-weight: bold;
+    filter: drop-shadow(0px 10px 25px rgba(0, 0, 0, 0.25));
+}
+.btn::after {
+    /*  Permet d'éviter que le bouton change de taille au survol */
+
+    /*  En gros le pseudo-élément permet de "réserver" 
+        l'espace horizontal du texte en gras.
+        On charge le texte ici en gras puis on le cache.
+        Pour bien comprendre, jouer avec l'inspecteur.
+     */
+
+    /*  Ref : 
+        https://stackoverflow.com/questions/5687035/css-bolding-some-text-without-changing-its-containers-size 
+    */
+    display: block;
+    content: attr(title);
+    font-weight: bold;
+    height: 0;
+    color: transparent;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+/* ACCUEIL */
+
+#page_accueil h1{
+    margin-bottom: 180px;
+}
+
+#page_accueil .content {
+    margin: 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 200px;
+}
+
+#page_accueil .content img{
+    max-width: 100%;
+}
+
+/* CV */
