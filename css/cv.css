@@ -23,5 +23,46 @@ h1{
     font-weight: bold;
     line-height: 20px;
     color: black;
-    
+}
+
+section {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.image-fifa {
+    background-image: 
+        linear-gradient(90deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 100%),
+        url("../medias/fifa.jpg");
+    width: 600px;
+    height: 200px;
+}
+
+#jeux-videos {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+}
+
+span {
+    font-size: 1.2em;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+
+.element-avec-legende {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.element-avec-legende img {
+    width: 140px;
 }
