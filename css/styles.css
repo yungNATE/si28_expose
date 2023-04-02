@@ -120,3 +120,14 @@ nav li a{
     overflow: hidden;
     visibility: hidden;
 }
+
+footer::after {
+    content: url('../medias/serge_footer.png');
+    position: absolute;
+    right: 30px;
+    transition: cubic-bezier(.7, -0.08, .35, .9) .3s;
+}
+
+footer:hover::after {
+    transform: translateX(-20px);
+}
