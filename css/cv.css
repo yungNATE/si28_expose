@@ -68,6 +68,10 @@ span {
     width: 140px;
 }
 
+p {
+    text-align: justify;
+}
+
 @media screen and (max-width: 1100px) {
     .accueil_link {
         top: 60px;
