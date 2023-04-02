@@ -1,29 +1,83 @@
 /* GENERAL */
+
+/* fonts */
+@font-face {
+    font-family: "Inter";
+    src: url("../fonts/static/Inter-Regular.ttf") format("truetype");
+    font-weight: bold;
+}
+  
+
+/* HTML / BODY */
 html, body{
     min-height: 100%;
 }
 
 body{
+    font-family: "Inter", sans-serif;
+    /* TODO : bug avec la font, à régler */
+
     /*  clamp() permet de définir une taille variable
         ainsi qu'une borne min et max.
         Ici on aura donc un padding horizontal
         de 8% de la largeur de la fenêtre (8vw).
         Cette valeur ne pourra pas excéder ni 10px, ni 150px 
     */
-    padding : 10px clamp(10px, 8vw, 150px);
+    padding : 90px clamp(10px, 8vw, 150px);
 }
 
+
+/* titres */
 h1{
     font-size: 40px;
     font-weight: bold;
     line-height: 30px;
+    margin-bottom: 100px;
 }
-
 h1 > span{
     font-size: 24px;
     font-weight: normal;
 }
 
+/* liste */
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* navigation (menu) */
+nav{
+    text-align: center;
+}
+nav ul{
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    background-color: black;
+    list-style: none;
+
+    padding: 15px 50px;
+    border-radius: 999px;
+}
+nav li{
+    transition: transform .3s ease-in-out;
+}
+nav li:hover{
+    flex-grow: 1.2;
+    transform: scale(1.2);
+}
+nav li a{
+    color: white;
+    text-decoration: none;
+    margin-inline: 20px;
+    font-size: 24px;
+    position: relative;
+}
+
+/* bouton */
 .btn{
     font-size: 24px;
     font-size: clamp(16px, 2vw, 24px);
@@ -66,24 +120,3 @@ h1 > span{
     overflow: hidden;
     visibility: hidden;
 }
-
-/* ACCUEIL */
-
-#page_accueil h1{
-    margin-bottom: 100px;
-}
-
-#page_accueil .content {
-    margin: 0 50px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    gap: 200px;
-}
-
-#page_accueil .content img{
-    max-width: 100%;
-}
-
-/* CV */

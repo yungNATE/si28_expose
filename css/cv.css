@@ -1,0 +1,27 @@
+/* CV */
+h1{
+    text-align: center;
+}
+
+.accueil_link{
+    position: absolute;
+    top: 120px;
+    left: 40px;
+
+    /* Le text-align: center va se propager à l'ensemble de ses enfants */
+    text-align: center;
+    text-decoration: none;
+}
+
+.accueil_link img{
+    width: 130px;
+    display: block;
+}
+
+.accueil_link span{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    color: black;
+    
+}
