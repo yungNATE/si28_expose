@@ -13,12 +13,11 @@ h1{
     text-align: center;
     text-decoration: none;
 }
-
 .accueil_link img{
     width: 130px;
+    margin: auto;
     display: block;
 }
-
 .accueil_link span{
     font-size: 16px;
     font-weight: bold;
@@ -26,13 +25,19 @@ h1{
     color: black;
 }
 
-section {
-    margin-top: 20px;
-    margin-bottom: 50px;
+.content section {
+    margin-top: 75px;
+    margin-bottom: 150px;
     position: relative;
 }
+.content section span {
+    font-size: 1.2em;
+}
+.content section p {
+    text-align: justify;
+}
 
-.loisirs_img_fifa {
+.loisirs_content {
     background-image: 
         linear-gradient(90deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 1) 50%), 
         url("../medias/fifa.jpg");
@@ -41,8 +46,7 @@ section {
     width: 100%;
     height: 200px;
 }
-
-.loisirs_img_fifa > span {
+.loisirs_content > span {
     position: absolute;
     right: 30%;
 
@@ -54,10 +58,7 @@ section {
     padding: 10px;
 }
 
-span {
-    font-size: 1.2em;
-}
-
+/* classe utilitaire "flex-container" et enfants */
 .flex-container {
     display: flex;
     align-items: center;
@@ -76,14 +77,12 @@ span {
     width: 140px;
 }
 
-p {
-    text-align: justify;
-}
-
 @media screen and (max-width: 1100px) {
     .accueil_link {
-        top: 60px;
-        scale: .9;
+        top: 10px;
+    }
+    .accueil_link img {
+        width: 50px;
     }
 }
 
