@@ -6,6 +6,10 @@ h1{
 
 .content {
     margin: 0 50px;
+
+    /*  Bien comprendre flexbox :
+        https://the-echoplex.net/flexyboxes/ 
+    */
     display: flex;
     justify-content: center;
     align-items: flex-end;
